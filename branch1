@@ -1,0 +1,15 @@
+#!/bin/bash
+touch prueba.txt
+funcion_eliminar(){
+	/bin/rm prueba.txt
+	echo "se ha borrado"
+	exit
+	
+}
+
+trap "funcion_eliminar" 2 
+while true;
+do	
+	echo $RANDOM>>prueba.txt
+	true
+done
